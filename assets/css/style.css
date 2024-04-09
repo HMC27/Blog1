@@ -1,0 +1,441 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+html {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.col {
+    float: left;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+:root {
+    --den : #333
+}
+
+.clearfloat {
+    clear: both;
+    padding-bottom: 100px;
+}
+
+/* End Main */
+#header {
+    width: 100%;
+    height: 46px;
+    background-color: rgb(10, 10, 10);
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}
+
+#nav > li {
+    display: inline-block;
+} 
+
+#nav a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 15px 24px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+#nav ,.morenav {
+    list-style-type: none;
+}
+
+.morenav li:hover ,#nav > li:hover > a {
+    background-color: gray;
+    color: black;
+}
+
+#nav .morenav a {
+    width: 100%;
+    text-transform: capitalize;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+.morenav {
+    display: none;
+    min-width: 150px;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(12, 12, 12, 0.5);
+    top: 100%;
+    left: 0;
+}
+
+#nav .morenav a {
+    color: black;
+}
+
+.more:hover .morenav {
+    display: block;
+}
+
+.muiten {
+    font-size: 12px;
+}
+
+.search {
+    min-height: 46px;
+    min-width: 46px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: white;
+    font-size: 12px;
+}
+
+.search:hover {
+    background-color: rgb(216, 14, 14);
+}
+
+.search a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 46px;
+    padding: 16px 24px;
+}
+/* End head */
+#banner {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 75%;
+    background-image: url('https://github.com/HMC27/Blog1/blob/main/assets/img/a8.jpg?raw=true');
+    background-size: cover;
+}
+
+.text {
+    position: absolute;
+    bottom: 2px;
+    padding: 32px;
+    text-shadow: 0 0 1.7px rgb(7, 2, 2) ;
+    transform: translateX(-50%);
+    left: 50%;
+}
+/* End slider */
+.section {
+    max-width: 800px;
+    padding: 64px 16px;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.subhead {
+    text-align: center;
+    margin: 5px 0;
+    font-style: italic;
+    opacity: 0.6;
+}
+.about-t {
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content #list-mem {
+    margin-top: 130px;
+}
+
+#content .image {
+    max-width: 152px;
+    max-height: 152px;
+    border-radius: 4px;
+}
+
+.memberfr .name {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+#content .memberfr {
+    float: left;
+    min-width: 25%;
+    text-align: center;
+}
+
+.list-one {
+    background-color: #fff;
+    color: black;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.list-one .font {
+    background-color: rgb(231, 54, 0);
+    color: white;
+    margin-left: 16px;
+    padding: 0 8px 2px;
+}
+
+.list-one li {
+    padding: 12px 0 12px 12px;
+    border-bottom: 1px solid gray;
+    color: gray;
+}
+
+.list-one #num {
+    float: right;
+    margin-right: 20px;
+    color: #fff;
+    padding: 0 8px 2px;
+    background: black;
+    border-radius: 15px;
+}
+
+#other-img .getmore img {
+    width: 100%;
+    height: 180px;
+}
+
+#other-img {
+    padding: 32px 8px;
+    margin-left: -14px;
+    margin-right: -16px;
+}
+
+#other-img .getmore {
+    float: left;
+    color: black;
+    width: 32%;
+    background-color: #fff;
+    margin: 0 5px;
+}
+
+.getmore .h2 {
+    font-size: medium;
+    font-weight: 600;
+    margin: 16px 0;
+}
+
+.getmore .container {
+    margin: 0 16px;
+}
+
+
+.getmore .dtime {
+    color: gray;
+    font-size: 15px;
+    margin: 16px 0;
+}
+
+.getmore .about {
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.getmore button {
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+    border: 0;
+    font-size: small;
+    text-decoration: none;
+    display: block;
+    width: 96px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.getmore button:hover {
+    color: black;
+    background-color: gray;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(37, 36, 36, 0.4);
+    z-index: 2;
+    display: none;
+}
+
+.modal.op {
+    display: block;
+}
+
+.modal .cont-modal {
+    background-color: white;
+    width: 70%;
+    margin: 8% 15% 0;
+    position: relative;
+    animation: modal-animation ease .5s;
+}
+
+.cont-modal .head {
+    height: 100px;
+    background-color: rgb(6, 184, 184);
+    text-align: center;
+    line-height: 100px;
+    margin-bottom: 16px;
+}
+
+.cont-modal .close-modal {
+    position: absolute;
+    right: 0;
+    padding: 12px;
+}
+
+.cont-modal .close-modal:hover {
+    color: white;
+}
+
+.cont-modal .body {
+    margin-left: 16px;
+}
+
+.cont-modal .body .name-box {
+    font-size: large;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.cont-modal .body .box-input {
+    width: 95%;
+    height: 32px;
+    margin-bottom: 20px;
+}
+
+.cont-modal .body .login-btn {
+    display: block;
+    width: 60%;
+    height: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgb(6, 184, 184);
+    line-height: 60px;
+    margin-left: 17%;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+    color: black;
+}
+
+.cont-modal .body .login-btn:hover {
+    background-color: gray;
+    color: white;
+}
+
+.cont-modal .body .help {
+    color: rgb(6, 184, 184);
+    text-decoration: none;
+}
+
+@keyframes modal-animation {
+    from {
+        transform: translatey(-130px);
+        opacity: .2;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.contact {
+    margin-top: 48px;
+    line-height: 1.5;
+}
+
+.inf i[class*="ti-"] {
+    margin-right: 8px;
+}
+
+.inf {
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+.send {
+    font-size: 16px;
+}
+
+.send .form-control {
+    width: 100%;
+    padding: 12px 8px;
+    margin: 4px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.send .button{
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    position: relative;
+    margin-top: 12px;
+    float: right;
+    right: -16px;
+    border: none;
+}
+
+.send .button:hover {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+.map-section img {
+    width: 100%;
+}
+
+#footer .social{
+    text-align: center;
+    height: 150px;
+    margin-top: 100px;
+}
+
+.social > a {
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    padding: 0 2px;
+    font-size: 28px;
+}
+
+.coppy {
+    color: rgb(90, 90, 90);
+    font-size: 16px;
+    margin-top: 24px;
+}
+
+.coppy a {
+    color: rgb(90, 90, 90);
+}
