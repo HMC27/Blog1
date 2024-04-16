@@ -4,6 +4,7 @@
 }
 html {
     font-family: 'Segoe UI', Arial, sans-serif;
+    box-sizing: content-box;
 }
 #main {
     overflow: hidden;
@@ -121,6 +122,9 @@ html {
     line-height: 46px;
     padding: 16px 24px;
 }
+.menubar {
+    display: none;
+}
 /* End head */
 #banner {
     position: relative;
@@ -144,7 +148,6 @@ html {
     padding: 64px 16px;
     margin: 0 auto;
 }
-
 .heading {
     text-align: center;
     margin: 10px 0;
@@ -414,6 +417,12 @@ html {
     color: black;
     cursor: pointer;
 }
+.inf a {
+    opacity: 0.7;
+}
+.inf a:hover {
+    opacity: 1;
+}
 /*End Contact */ 
 .map-section img {
     width: 100%;
@@ -459,6 +468,13 @@ html {
     }
     .send .button {
         right: -104px;
+        width: 50%;
+    }
+    .getmore button {
+        width: 100%;
+    }
+    .inf {
+        font-size: 28px;
     }
 }
 @media screen and (max-width: 739px) {
@@ -475,13 +491,14 @@ html {
     }
     #other-img .getmore {
         float: none;
-        width: 80%;
+        width: 95%;
         margin: 0 auto;
         margin-top: 12px;
     }
     .getmore button {
         margin-bottom: 8px;
         display: inline-block;
+        width: 100%;
     }
     .c-12 {
         width: 160%;
@@ -490,6 +507,7 @@ html {
     }
     .send .button {
         right: -140px;
+        width: 50%;
     }
     .social > a {
         font-size: 16px;
@@ -500,9 +518,54 @@ html {
     .modal .cont-modal {
         width: 95%;
         margin: 10px;
+        margin-top: 48px;
     }
     .help-b {
         width: 100px;
         margin-left: 70% !important;
+    }
+    #nav > li {
+        display: block;
+    }
+    .search {
+        display: none;
+    }
+    .menubar {
+        min-height: 46px;
+        min-width: 46px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        color: white;
+        font-size: 12px;
+        display: block;
+    }
+    .menubar:hover {
+        background-color: rgb(216, 14, 14);
+    }
+    .menubar a {
+        text-decoration: none;
+        color: #fff;
+        line-height: 46px;
+        padding: 16px 24px;
+    }
+    #header {
+        overflow: hidden;
+    }
+    #nav a {
+        display: block;
+        padding: 12px;
+        line-height: 24px;
+    }
+    #nav > li:first-child {
+        display: inline-block;
+    }
+    .morenav {
+        position: initial;
+        background-color: rgb(41, 41, 41);
+    }
+    #nav .morenav a {
+        color: white;
+        padding: 6px 40px;
     }
 }
