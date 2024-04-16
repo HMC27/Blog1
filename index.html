@@ -18,7 +18,7 @@
                 <li><a href="#OTHER">Other</a></li>
                 <li><a href="#CONTACT">Contact</a></li>
                 <li class="more" style="position: relative;">
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="muiten ti-angle-double-down"></i>
                     </a>
@@ -31,6 +31,9 @@
             </ul>
             <div class="search">
                 <a href=""><i class="ti-search"></i></a>
+            </div>
+            <div id="mobile-menu" class="menubar">
+                <a><i class="ti-view-list"></i></a>
             </div>
         </div>
         <div id="banner">
@@ -119,8 +122,8 @@
                 <div class="row contact">
                     <div class="col col-half c-12 inf">
                         <p><i class="ti-location-pin"></i>Hai Phong,VN</p>
-                        <p><i class="ti-mobile"></i>Phone: 0886361977</p>
-                        <p><i class="ti-email"></i>Email: hoa12a2nbk@gmail.com</p>
+                        <p><i class="ti-mobile"></i>Phone: <a href="tel:0886361977">0886361977</a></p>
+                        <p><i class="ti-email"></i>Email: <a href="mailto:hoa12a2nbk@gmail.com">hoa12a2nbk@gmail.com</a></p>
                     </div>
                     <div class="col col-half send">
                         <form action="">
@@ -184,6 +187,29 @@
         out.addEventListener('click',offlog)
         modal.addEventListener('click',offlog)
         modalcontainer.addEventListener('click', function (event) {event.stopPropagation()})
+        var hder = document.getElementById('header');
+        var Mobilemenu = document.getElementById('mobile-menu');
+        var hderhight = hder.clientHeight
+        Mobilemenu.onclick = function() {
+            var iscl = hder.clientHeight === hderhight
+            if (iscl) {
+                hder.style.height = 'auto'
+            } else {
+                hder.style.height = null
+            }
+        }
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function (event) {
+                var ismore = this.nextElementSibling && this.nextElementSibling.classList.contains('morenav')
+                if (!ismore) {
+                    hder.style.height = null
+                } else {
+                    event.preventDefault()
+                }
+            }
+        }
     </script>
 </body>
 </html>
